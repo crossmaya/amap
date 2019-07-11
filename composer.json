@@ -6,12 +6,12 @@
         "laravel-amap"
     ],
     "license": "MIT",
-    "homepage": "https://github.com/spatie/laravel-menu",
+    "homepage": "https://github.com/crossmaya/laravel-amap",
     "authors": [
         {
             "name": "JT",
             "email": "crossmaya@gmail.com",
-            "homepage": "https://www.thinkinlaravel.com",
+            "homepage": "https://github.com/crossmaya/laravel-amap",
             "role": "Developer"
         }
     ],
