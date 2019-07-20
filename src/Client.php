@@ -15,6 +15,8 @@ class Client
 
     private $apiVersion;
 
+    private $key;
+
     private $httpClient;
 
     private $lastResponse;
@@ -43,12 +45,25 @@ class Client
 
     }
 
+    public function setKey($key)
+    {
+        $this->key = $key;
+    }
+
+    public function getKey()
+    {
+        return $this->key;
+    }
+
     //目前只实现了坐标转换API
     public function api($name)
     {
         switch ($name) {
             case 'coordinate':
-                $api = new Api\Coordinate($this->key, $this);
+                $api = new Api\Coordinate($this);
+                break;
+            case 'weather':
+                $api = new Api\Weather($this);
                 break;
             default:
                 throw new InvalidArgumentException(sprintf("api [%s] is not found!", $name));

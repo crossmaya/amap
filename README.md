@@ -2,11 +2,11 @@
 
 **高德地图API**
 
-说明：本项目为试验性项目，目前不能用于生产环境
+说明：目前不能用于生产环境
 
 ## Installation
 
-试验性项目，待补充。
+待补充。
 
 ## Usage
 
@@ -14,6 +14,7 @@
 ```
 Route::get('/', function() {
     $client = app('amap.client');
+
     dump($client->api('coordinate')->convert([
         'locations' => '116.481499,39.990475|116.481499,39.990375',
     ]));
@@ -24,9 +25,11 @@ Route::get('/', function() {
 });
 ```
 
-试验性项目，待补充。
+新增天气查询接口: $client->api('weather')->weatherInfo();
+
+待补充。
 
 ## Configuration
 
-试验性项目，待补充。
+待补充。
 

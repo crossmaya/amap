@@ -12,7 +12,7 @@ class Coordinate extends Base
         $this->client->version('v3');
 
         $defaults = [
-            'key'       => $this->key,
+            'key'       => $this->client->getKey(),
             'locations' => '',
             'coordsys'  => 'gps',
             'sig'       => '',

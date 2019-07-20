@@ -6,15 +6,11 @@ abstract class Base
 {
     public $client;
 
-    public $key;
-
-    public function __construct($key, $client)
+    public function __construct($client)
     {
-        $this->key = $key;
-
         $this->client = $client;
     }
-
+    
     public function get($path, $content = null)
     {
         return $this->client->rawCall("GET", $path, $content);
