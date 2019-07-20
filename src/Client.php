@@ -40,7 +40,7 @@ class Client
 
         // register logger.
         if (isset($config['log']['file']) && $config['log']['file']) {
-            $this->registerLogger(config('amap.log'));
+            $this->registerLogger($config['log']);
         }
 
     }
